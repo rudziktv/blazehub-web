@@ -1,10 +1,10 @@
-import { ThemeProvider, useTheme } from "./providers/ThemeProvider";
+import { useTheme } from "./providers/ThemeProvider";
 import { AnimatePresence, motion } from "motion/react";
 import installShot from "./assets/screenshots/Screenshot From 2025-03-06 21-10-17.png";
 import installShotLight from "./assets/screenshots/Screenshot From 2025-03-06 21-10-36.png";
 import queueShot from "./assets/screenshots/queue-progress-view.png";
 import modeShot from "./assets/screenshots/installation-mode-choose.png";
-import { RiDownload2Line, RiDownloadLine } from "@remixicon/react";
+import { RiDownloadLine } from "@remixicon/react";
 
 function App() {
 	const { theme, setTheme } = useTheme();
