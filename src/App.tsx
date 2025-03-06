@@ -4,7 +4,7 @@ import installShot from "./assets/screenshots/Screenshot From 2025-03-06 21-10-1
 import installShotLight from "./assets/screenshots/Screenshot From 2025-03-06 21-10-36.png";
 import queueShot from "./assets/screenshots/queue-progress-view.png";
 import modeShot from "./assets/screenshots/installation-mode-choose.png";
-import { RiDownloadLine } from "@remixicon/react";
+import { RiDownloadLine, RiMoonClearLine, RiSunFill } from "@remixicon/react";
 
 function App() {
 	const { theme, setTheme } = useTheme();
@@ -15,15 +15,42 @@ function App() {
 				id="app"
 				className="bg-background text-foreground duration-700 w-screen h-screen rounded-none"
 			>
-				<div id="navbar">
-					<button>Download</button>
-					<button
-						onClick={() =>
-							setTheme(theme === "light" ? "dark" : "light")
-						}
-					>
-						Theme
-					</button>
+				<div className="navbar">
+					<span className="text-2xl font-bold text-center">
+						Blaze Hub
+					</span>
+					<div className="flex-1"></div>
+					<div className="flex gap-2">
+						<button
+							className="transparent circular"
+							onClick={() =>
+								setTheme(theme === "light" ? "dark" : "light")
+							}
+						>
+							<AnimatePresence>
+								{theme === "dark" ? (
+									<motion.div
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										exit={{ opacity: 0 }}
+									>
+										<RiSunFill />
+									</motion.div>
+								) : (
+									<motion.div
+										initial={{ opacity: 0 }}
+										animate={{ opacity: 1 }}
+										exit={{ opacity: 0 }}
+									>
+										<RiMoonClearLine />
+									</motion.div>
+								)}
+							</AnimatePresence>
+						</button>
+						<button className="action text-lg mono">
+							Download <RiDownloadLine />
+						</button>
+					</div>
 				</div>
 				<div
 					id="content"
@@ -136,7 +163,7 @@ function App() {
 						<span className="text-2xl">
 							Download and become a beta tester right now!
 						</span>
-						<button className="action">
+						<button className="action text-2xl">
 							Download <RiDownloadLine />
 						</button>
 					</motion.div>

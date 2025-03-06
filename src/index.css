@@ -1,16 +1,21 @@
 @import "tailwindcss";
 @import "./styles/button.css";
+@import "./styles/navbar.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
 	--color-background: #f0f8ff;
 	--color-primary: #51b9f6;
+	--color-on-primary: #000;
 	--color-foreground: #000;
+	--color-border: #adadad;
 }
 
 .dark {
 	--color-background: #0c0c0c;
-	--color-primary: #0b8bd5;
+	--color-primary: #08659b;
+	--color-on-primary: #8bd0f9;
 	--color-foreground: #fff;
+	--color-border: #3d3d3d;
 }

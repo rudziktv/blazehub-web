@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.navbar {
+	@apply flex items-center gap-4 p-4 border-b border-border border-solid duration-700;
+}

@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 button {
-	@apply flex items-center gap-2 bg-primary p-2 overflow-hidden relative duration-150 hover:cursor-pointer rounded-xl hover:rounded-2xl;
+	@apply bg-primary text-foreground flex items-center gap-2 p-2 overflow-hidden relative duration-150 hover:cursor-pointer rounded-xl hover:rounded-2xl;
 }
 
 button::after {
-	@apply bg-white absolute opacity-0 top-0 left-0 w-full h-full duration-150;
+	@apply bg-foreground absolute opacity-0 top-0 left-0 w-full h-full duration-150;
 	content: "";
 }
 
@@ -18,9 +18,25 @@ button:active::after {
 }
 
 button.action {
-	@apply text-2xl pl-8 pr-8 py-2 rounded-full;
+	@apply pl-8 pr-8 py-2 rounded-full;
 }
 
 button.action:has(.remixicon) {
 	@apply pr-6;
+}
+
+button.transparent {
+	@apply bg-transparent;
+}
+
+button.circular {
+	@apply rounded-full self-stretch aspect-square;
+}
+
+button.mono {
+	@apply bg-foreground text-background;
+}
+
+button.mono::after {
+	@apply bg-background;
 }
