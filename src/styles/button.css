@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+button {
+	@apply flex items-center gap-2 bg-primary p-2 overflow-hidden relative duration-150 hover:cursor-pointer rounded-xl hover:rounded-2xl;
+}
+
+button::after {
+	@apply bg-white absolute opacity-0 top-0 left-0 w-full h-full duration-150;
+	content: "";
+}
+
+button:hover::after {
+	@apply opacity-15;
+}
+
+button:active::after {
+	@apply opacity-30;
+}
+
+button.action {
+	@apply text-2xl pl-8 pr-8 py-2 rounded-full;
+}
+
+button.action:has(.remixicon) {
+	@apply pr-6;
+}
