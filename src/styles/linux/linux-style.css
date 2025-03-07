@@ -27,9 +27,11 @@
 }
 
 .linux .window {
+	@apply duration-700;
 	border-radius: var(--window-radius);
 	background-color: var(--window-bg-color);
 	color: var(--window-fg-color);
+	box-shadow: black 0px 0px 25px 0px;
 }
 
 .linux .headerbar {

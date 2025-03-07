@@ -7,7 +7,7 @@ import {
 
 const InstalledTab = () => {
 	return (
-		<div className="linux">
+		<div className="linux p-8">
 			<div className="window">
 				<div className="headerbar">
 					<div className="tabswitcher">
