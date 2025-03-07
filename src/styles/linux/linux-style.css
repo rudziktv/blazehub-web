@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import "./linux-buttons.css";
+
+.linux {
+	--window-radius: 12px;
+	--window-bg-color: #fafafa;
+	--window-fg-color: rgba(0, 0, 0, 80%);
+	--view-bg-color: #fff;
+	--view-fg-color: rgba(0, 0, 0, 80%);
+
+	--card-bg-color: #fff;
+	--card-fg-color: rgba(0, 0, 0, 80%);
+	--card-shade-color: rgba(0, 0, 0, 7%);
+
+	font-family: "Cantarell", "Mulish", sans-serif;
+}
+
+.dark .linux {
+	--window-bg-color: #242424;
+	--window-fg-color: #fff;
+	--view-bg-color: #1e1e1e;
+	--view-fg-color: #fff;
+
+	--card-bg-color: rgba(255, 255, 255, 8%);
+	--card-fg-color: #fff;
+	--card-shade-color: rgba(0, 0, 0, 36%);
+}
+
+.linux .window {
+	border-radius: var(--window-radius);
+	background-color: var(--window-bg-color);
+	color: var(--window-fg-color);
+}
+
+.linux .headerbar {
+	@apply flex items-center;
+}
+
+.linux .tabswitcher {
+	@apply flex items-center;
+}
+
+.linux .tabswitcher > button {
+	@apply bg-transparent w-32 justify-center;
+}
+
+.linux .remixicon {
+	@apply w-5 h-5;
+}
+
+.linux .windowcontrolbtns button {
+	@apply aspect-square rounded-full p-1;
+}

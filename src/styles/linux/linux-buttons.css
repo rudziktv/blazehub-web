@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.linux button {
+	@apply font-bold p-0 py-1.5 gap-1.5 rounded-lg;
+}

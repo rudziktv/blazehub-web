@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 button {
-	@apply bg-primary text-foreground flex items-center gap-2 p-2 overflow-hidden relative duration-150 hover:cursor-pointer rounded-xl hover:rounded-2xl;
+	@apply font-semibold bg-primary text-foreground flex items-center gap-2 p-2 overflow-hidden relative duration-150 hover:cursor-pointer rounded-xl hover:rounded-2xl;
 }
 
 button::after {
