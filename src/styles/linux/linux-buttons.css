@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
 .linux button {
-	@apply font-bold p-0 py-1.5 gap-1.5 rounded-lg;
+	@apply font-bold p-0 py-1.5 gap-1.5 rounded-lg bg-transparent duration-700;
+}
+
+.linux button.selected {
+	@apply bg-[#ebebeb] dark:bg-[#303030];
+	/* background-color: var(--card-shade-color) !important; */
 }

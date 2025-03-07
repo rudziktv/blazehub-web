@@ -35,21 +35,37 @@
 }
 
 .linux .headerbar {
-	@apply flex items-center;
+	@apply flex items-center p-2;
 }
 
 .linux .tabswitcher {
-	@apply flex items-center;
+	@apply flex items-center gap-1;
 }
 
-.linux .tabswitcher > button {
-	@apply bg-transparent w-32 justify-center;
+.linux .tabswitcher button {
+	@apply w-32 justify-center;
 }
 
 .linux .remixicon {
 	@apply w-5 h-5;
 }
 
+.linux .windowcontrolbtns {
+	@apply flex gap-4;
+}
+
 .linux .windowcontrolbtns button {
-	@apply aspect-square rounded-full p-1;
+	@apply bg-[#fafafa] dark:bg-[var(--card-bg-color)] aspect-square rounded-full p-1;
+}
+
+.linux .boxed-list {
+	@apply bg-[var(--card-bg-color)] rounded-2xl;
+}
+
+.linux .boxed-list > * {
+	@apply rounded-2xl;
+}
+
+.linux .separator {
+	@apply bg-[var(--card-shade-color)] h-[1px];
 }
